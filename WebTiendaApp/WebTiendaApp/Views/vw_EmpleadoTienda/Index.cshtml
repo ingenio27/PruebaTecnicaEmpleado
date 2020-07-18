@@ -1,0 +1,52 @@
+﻿@model IEnumerable<WebTiendaApp.Models.vw_EmpleadoTienda>
+
+@{
+    ViewBag.Title = "Listado de Empleados del dia con ";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreTienda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nombres)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Cargo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NombreTienda)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mes)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Dia)
+    </td>
+</tr>
+}
+
+</table>
